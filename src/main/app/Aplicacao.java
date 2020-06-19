@@ -13,7 +13,7 @@ public class Aplicacao{
         Gson gson = new Gson();
 
         //Especificando a URL da API Aluguel
-        String response = rec.run("https://aluguebug.herokuapp.com/calc?dados={%22valor_nominal%22:2000,%22dia%22:6}");
+        String response = rec.run("https://aluguebug.herokuapp.com/calc?dados={%22valor_nominal%22:4000,%22dia%22:6}");
 
         //Transforma a resposta json para string
         String obj = gson.fromJson(response, String.class);
@@ -25,7 +25,7 @@ public class Aplicacao{
         Integer Valor_calculado = Valor.getInt("valor_calculado");
 
         //Printa o valor na qual foi coletado na resposta da api
-        System.out.println(Valor_calculado);
+        System.out.println("Iago Cardial, Estou consumindo uma api WEB, Valor retornado para teste:" + Valor_calculado);
 
     }
 }
