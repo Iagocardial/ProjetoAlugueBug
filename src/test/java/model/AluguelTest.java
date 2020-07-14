@@ -13,6 +13,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class AluguelTest{
+
+    // Teste usando parametros de um arquivo csv
+
     @ParameterizedTest(name="Teste {index} => expected={0}," + "day={1}")
     @CsvFileSource(resources="/test_file.csv", delimiter = ',')
     public void desconto_10_limite_anterior0(int expected, int day) throws IOException {
@@ -35,6 +38,8 @@ public class AluguelTest{
         //Printa o valor na qual foi coletado na resposta da api
         assertEquals(expected, Valor_calculado);
     }
+
+    // Teste usando parametros
 
     // @ParameterizedTest
     // @CsvSource(value={
@@ -75,6 +80,8 @@ public class AluguelTest{
     //     //Printa o valor na qual foi coletado na resposta da api
     //     assertEquals(expected, Valor_calculado);
     // }
+    
+    // Teste unitário, feitos uma função para cada
 
     // @Test
     // public void desconto_10_limite1() throws IOException {
